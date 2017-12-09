@@ -5,9 +5,12 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool Face$/;
+      botRegex = /^\/cool face$/,
+      botRegex2 = /^\/cool man$/,
+      botRegex3 = /^\/cool guy$/,
+      botRegex4 = /^\/cool name$/;
 
-  if(request.text && botRegex.test(request.text)) {
+  if(request.text && botRegex.test(request.text) || botRegex2.test(request.text) || botRegex3.test(request.text) || botRegex4.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
