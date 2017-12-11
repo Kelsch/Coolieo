@@ -22,8 +22,6 @@ function respond() {
               postMessage();
               this.res.end();
               break;
-          default:
-              break;
   }
 }
 
