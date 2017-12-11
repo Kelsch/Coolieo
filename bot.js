@@ -9,7 +9,7 @@ function respond() {
       faceResponse = /^\/cool face$/ || /^\/cool man$/ || /^\/cool name$/ || /^\/cool guy$/,
       hiResponse = /^\!hi$/;
   
-  switch (request)
+  switch (faceResponse)
   { 
           case faceResponse:
               this.res.writeHead(200);
