@@ -8,14 +8,12 @@ function respond() {
       faceResponse = /^\/cool face$/,
       manResponse = /^\/cool man$/,
       guyResponse = /^\/cool guy$/,
-      nameResponse = /^\/cool name$/,
-      helloResponse = /^\/cool hi$/;
+      nameResponse = /^\/cool name$/;
 
   if(request.text && faceResponse.test(request.text) || 
                      manResponse.test(request.text) || 
                      guyResponse.test(request.text) || 
-                     nameResponse.test(request.text) ||
-                     helloResponse.text(request.text)) {
+                     nameResponse.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
