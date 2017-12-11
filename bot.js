@@ -9,7 +9,7 @@ function respond() {
       manResponse = /^\/cool man$/,
       guyResponse = /^\/cool guy$/,
       nameResponse = /^\/cool name$/,
-      helloResponse = /^\!hi$/;
+      helloResponse = /^\/!hi$/;
 
   if(request.text && faceResponse.test(request.text) || 
                      manResponse.test(request.text) || 
