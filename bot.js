@@ -19,11 +19,6 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
-  
-  #if(text.toLowerCase().substring(0, 3) == "!hi"){
- #   sendText("Hello, " + name);
- #   doPost(e);
-#  }
 }
 
 function postMessage() {
@@ -60,11 +55,5 @@ function postMessage() {
   });
   botReq.end(JSON.stringify(body));
 }
-
-#function doPost(e){
-#  var post = JSON.parse(e.postData.getDataAsString());
-#  var text = post.text;
-#  var name = post.name
-#}
 
 exports.respond = respond;
