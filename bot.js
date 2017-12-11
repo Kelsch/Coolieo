@@ -11,30 +11,18 @@ function respond() {
       nameResponse = /^\/cool name$/,
       guyResponse = /^\/cool guy$/;
   
-  switch (faceResponse || manResponse)
+  switch ()
   { 
           case faceResponse:
-              this.res.writeHead(200);
-              postMessage();
-              this.res.end();
-              break;
-    
           case manResponse:
-              this.res.writeHead(200);
-              postMessage();
-              this.res.end();
-              break;
-          case hiResponse:
-              this.res.writeHead(200);
-              postMessage();
-              this.res.end();
-              break;
           case nameResponse:
+          case guyResponse:
               this.res.writeHead(200);
               postMessage();
               this.res.end();
               break;
-         case guyResponse:
+      
+          case hiResponse:
               this.res.writeHead(200);
               postMessage();
               this.res.end();
