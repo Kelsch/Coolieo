@@ -29,7 +29,7 @@ function postMessage() {
 
   
   
-  botResponse = ("Hello, " + name);
+  botResponse = ("Hello");
 
   options = {
     hostname: 'api.groupme.com',
