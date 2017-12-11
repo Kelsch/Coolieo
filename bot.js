@@ -29,10 +29,10 @@ function respond() {
 
 function postMessage() {
   var botResponse, options, body, botReq;
-  var post = JSON.parse(e.postData.getDataAsString());
   var name = post.name;
+  var user = client.user.get("user id here");
 
-  botResponse = ("Hello, " + name);
+  botResponse = ("Hello, " + user);
 
   options = {
     hostname: 'api.groupme.com',
