@@ -11,7 +11,7 @@ function respond() {
       nameResponse = /^\/cool name$/,
       guyResponse = /^\/cool guy$/;
   
-  switch (request)
+  switch (faceResponse)
   { 
           case faceResponse:
           case manResponse:
