@@ -27,7 +27,7 @@ function respond() {
 function postMessage() {
   var botResponse, botResponse2, options, body, botReq;
 
-  botResponse = cool();
+  
   
   botResponse2 = ("Hello, " + name);
 
