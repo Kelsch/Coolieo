@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       faceResponse = /^\/cool face$/,
       manResponse = /^\/cool man$/,
-      guyResponse = /^\/cool hi$/,
+      guyResponse = /^\/hi$/,
       nameResponse = /^\/cool name$/;
 
   if(request.text && faceResponse.test(request.text) || 
