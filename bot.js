@@ -10,19 +10,35 @@ function respond() {
       hiResponse = /^\!hi$/,
       nameResponse = /^\/cool name$/,
       guyResponse = /^\/cool guy$/;
-
-  if(request.text && faceResponse.test(request.text) || 
-                     manResponse.test(request.text) || 
-                     hiResponse.test(request.text) || 
-                     nameResponse.test(request.text) ||
-                     guyResponse.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage();
-    this.res.end();
-  } else {
-    console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
+  
+  switch (faceResponse || manResponse)
+  { 
+          case faceResponse:
+              this.res.writeHead(200);
+              postMessage();
+              this.res.end();
+              break;
+    
+          case manResponse:
+              this.res.writeHead(200);
+              postMessage();
+              this.res.end();
+              break;
+          case hiResponse:
+              this.res.writeHead(200);
+              postMessage();
+              this.res.end();
+              break;
+          case nameResponse:
+              this.res.writeHead(200);
+              postMessage();
+              this.res.end();
+              break;
+         case guyResponse:
+              this.res.writeHead(200);
+              postMessage();
+              this.res.end();
+              break;
   }
 }
 
