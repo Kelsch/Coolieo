@@ -5,18 +5,12 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      faceResponse = /^\/cool face$/,
-      manResponse = /^\/cool man$/,
-      hiResponse = /^\!hi$/,
-      nameResponse = /^\/cool name$/,
-      guyResponse = /^\/cool guy$/;
+      faceResponse = /^\/cool face$/ || /^\/cool man$/ || /^\/cool name$/ || /^\/cool guy$/,
+      hiResponse = /^\!hi$/;
   
   switch (faceResponse)
   { 
           case faceResponse:
-          case manResponse:
-          case nameResponse:
-          case guyResponse:
               this.res.writeHead(200);
               postMessage();
               this.res.end();
