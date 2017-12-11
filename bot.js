@@ -1,7 +1,6 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-var post = JSON.parse(e.postData.getDataAsString());
-var name = post.name;
+
 
 var botID = process.env.BOT_ID;
 
@@ -10,7 +9,7 @@ function respond() {
       faceResponse = /^\/cool face$/ || /^\/cool man$/ || /^\/cool name$/ || /^\/cool guy$/,
       hiResponse = /^\!hi$/;
   
-  switch (faceResponse)
+  switch (request)
   { 
           case faceResponse:
               this.res.writeHead(200);
@@ -30,8 +29,10 @@ function respond() {
 
 function postMessage() {
   var botResponse, options, body, botReq;
+  var post = JSON.parse(e.postData.getDataAsString());
+  var name = post.name;
 
-  botResponse = ("Hello, " + cool());
+  botResponse = ("Hello, " + name);
 
   options = {
     hostname: 'api.groupme.com',
