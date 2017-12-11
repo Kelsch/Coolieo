@@ -7,13 +7,15 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       faceResponse = /^\/cool face$/,
       manResponse = /^\/cool man$/,
-      guyResponse = /^\!hi$/,
-      nameResponse = /^\/cool name$/;
+      hiResponse = /^\!hi$/,
+      nameResponse = /^\/cool name$/,
+      guyResponse = /^\/cool guy$/;
 
   if(request.text && faceResponse.test(request.text) || 
                      manResponse.test(request.text) || 
-                     guyResponse.test(request.text) || 
-                     nameResponse.test(request.text)) {
+                     hiResponse.test(request.text) || 
+                     nameResponse.test(request.text) ||
+                     guyResponse.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
