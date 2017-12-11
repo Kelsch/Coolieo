@@ -1,5 +1,7 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
+var post = JSON.parse(e.postData.getDataAsString());
+var name = post.name;
 
 var botID = process.env.BOT_ID;
 
@@ -20,6 +22,8 @@ function respond() {
               this.res.writeHead(200);
               postMessage();
               this.res.end();
+              break;
+          default:
               break;
   }
 }
